@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Your Pizza</h1>
+        <form id="pizzaForm">
+            <div class="form-group">
+                <label for="customerName">Your Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+            </div>
+            <!-- Form group for pizza size selection -->
+            <div class="form-group">
+                <label for="pizzaSize">Choose Pizza Size:</label>
+                <select id="pizzaSize" name="pizzaSize" required>
+                    <option value="">Select Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <!-- Form group for crust type selection -->
+            <div class="form-group">
+                <label for="crustType">Crust Type:</label>
+                <select id="crustType" name="crustType" required>
+                    <option value="">Select Crust</option>
+                    <option value="thin">Thin</option>
+                    <option value="thick">Thick</option>
+                    <option value="stuffed">Stuffed</option>
+                </select>
+            </div>
+            <!-- Form group for toppings selection -->
+            <div class="form-group">
+                <label>Ingredients:</label>
+                <div>
+                    <input type="checkbox" id="cheese" name="toppings" value="Cheese">
+                    <label for="cheese">Cheese</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="onions" name="toppings" value="Onions">
+                    <label for="onions">Onions</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="specialInstructions">Special Instructions:</label>
+                <textarea id="specialInstructions" name="specialInstructions" rows="4"></textarea>
+            </div>
+            <button type="submit">Order</button>
+        </form>
+        <!-- Paragraph for displaying dynamically added student information -->
+        <p id="studentInfo"></p>
+        <!-- Linking the JavaScript file -->
+        <div id="pizzaDescription"></div>
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
